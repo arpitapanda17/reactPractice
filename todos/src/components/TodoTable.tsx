@@ -1,5 +1,5 @@
 import { TodoModel } from "../models/TodoModel";
-import TodoRowItem from "./TodoRowItem";
+import {TodoRowItem} from "./TodoRowItem";
 function TodoTable(props: {todos: TodoModel[],
                             deleteTodo: Function
 }){
