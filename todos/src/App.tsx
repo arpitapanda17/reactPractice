@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import TodoTable from './components/TodoTable';
 import {NewTodoForm} from './components/NewTodoForm';
 
-function App() {
+export const App = () => {
   const [todos,setTodos] =useState([
     {rowNumber:1, rowDescription:'Feed puppy',rowAssigned:'User One'},
     {rowNumber:2, rowDescription:'Water plants',rowAssigned:'User Two'},
@@ -48,12 +48,10 @@ function App() {
           <button className='btn btn-primary' onClick={()=>setShowAddTodoForm(!showAddTodoForm)}>
             {showAddTodoForm?'Close New Todo':'Add New Todo'}  
           </button>   
-          {/* {showAddTodoForm && <NewTodoForm addTodo={addTodo}/> } */}
+           {showAddTodoForm && <NewTodoForm addTodo={addTodo}/> } 
           
       </div>
       </div>
     </div>
   );
 }
-
-export default App;
